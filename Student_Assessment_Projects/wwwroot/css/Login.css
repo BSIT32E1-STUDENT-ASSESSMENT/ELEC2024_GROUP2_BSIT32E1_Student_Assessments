@@ -4,30 +4,26 @@
 
 .login-container {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    margin-top: 38px;
+    margin-bottom: -20px;
+    width: 105%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
+
 }
 
 .background-image {
-    position: absolute;
-    top: 31px;
-    left: 720px;
-    width: 668px;
-    height: 954px;
-    z-index: -1;
     background-image: url('~/images/Rectangle 1.png');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.5; /* Adjust opacity as needed */
-    border-radius:15px;
-    border: 1px;
+    width: 350px;
+    height: 412px;
+    gap: 0px;
+    border-radius: 15px ;
+    border: 1px 0px 0px 0px;
+    margin-bottom: -27px;
 }
 
 .form-section {
-    position: relative;
     z-index: 1;
     background: rgba(255, 255, 255, 0.8); /* Optional: Add background to the form */
     padding: 2rem;
@@ -42,7 +38,6 @@
     height: 34px;
     top: 456px;
     left: 833px;
-    gap: 0px;
     font-family: Roboto;
     font-size: 22px;
     font-weight: 400;
@@ -53,54 +48,54 @@
 }
 
 .password {
-    width: 247px;
-    height: 20px;
-    top: 679px;
-    left: 1064px;
-    gap: 0px;
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 21.09px;
     letter-spacing: 0.05em;
     text-align: center;
     color: rgba(35, 49, 66, 1);
+    margin-left: 240px;
+    margin-top: 1000px;
+}
+
+.text-danger {
+    background-color: rgba(35, 49, 66, 1);
 }
 
 .form-control {
-    margin-bottom: 1rem;
-    width: 402px;
+    width: 390px;
     height: 52px;
-    top: 499px;
-    left: 864px;
     gap: 0px;
-    border-radius: 15px 0px 0px 0px;
-    border: 3px 0px 0px 0px;
+    border-radius: 15px;
+    border: 3px;
+    background-color: rgba(35, 49, 66, 1);
 }
 
-.text-center mb-4 img{
-    width: 237px;
-    height: 237px;
+.login-image {
+    width: 200px;
+    height: 200px;
     top: 130px;
     left: 937px;
+    gap: 0px;
 }
 
-btn {
-    width: 402px;
+.custom-button {
+    width: 390px;
     height: 50px;
-    top: 717px;
-    left: 864px;
-    gap: 0px;
-    border-radius: 15px 0px 0px 0px;
-    background: rgba(249, 89, 89, 1);
+    border-radius: 15px;
+    opacity: 1; /* Assuming you want the button to be visible, if not set to 0 */
+    position: relative;
+    top: 0; /* Adjust these values as needed for exact placement */
+    left: 0; /* Adjust these values as needed for exact placement */
+    background-color: rgba(249, 89, 89, 1);
+}
+
+.custom-button:hover {
+    background-color: rgba(249, 89, 89, 1);
 }
 
 .Register {
-    width: 256px;
-    height: 32px;
-    top: 793px;
-    left: 950px;
-    gap: 0px;
     font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
@@ -108,4 +103,5 @@ btn {
     letter-spacing: 0.05em;
     text-align: center;
     color: rgba(35, 49, 66, 1);
+    margin-left: 68px;
 }
