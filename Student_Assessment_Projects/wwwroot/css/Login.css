@@ -1,3 +1,111 @@
 ﻿body {
     background-color: rgba(64, 117, 173, 1);
 }
+
+.login-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-image {
+    position: absolute;
+    top: 31px;
+    left: 720px;
+    width: 668px;
+    height: 954px;
+    z-index: -1;
+    background-image: url('~/images/Rectangle 1.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Adjust opacity as needed */
+    border-radius:15px;
+    border: 1px;
+}
+
+.form-section {
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8); /* Optional: Add background to the form */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    top: 456px;
+    left: 833px;
+    gap: 0px;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
+.password {
+    width: 247px;
+    height: 20px;
+    top: 679px;
+    left: 1064px;
+    gap: 0px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.09px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: rgba(35, 49, 66, 1);
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    width: 402px;
+    height: 52px;
+    top: 499px;
+    left: 864px;
+    gap: 0px;
+    border-radius: 15px 0px 0px 0px;
+    border: 3px 0px 0px 0px;
+}
+
+.text-center mb-4 img{
+    width: 237px;
+    height: 237px;
+    top: 130px;
+    left: 937px;
+}
+
+btn {
+    width: 402px;
+    height: 50px;
+    top: 717px;
+    left: 864px;
+    gap: 0px;
+    border-radius: 15px 0px 0px 0px;
+    background: rgba(249, 89, 89, 1);
+}
+
+.Register {
+    width: 256px;
+    height: 32px;
+    top: 793px;
+    left: 950px;
+    gap: 0px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 18.75px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: rgba(35, 49, 66, 1);
+}
