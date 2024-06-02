@@ -14,15 +14,25 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
 
                 
-                    <label class="form-label">Username</label>
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-              
+                    <div class="form-group">
+                        <label class="form-label">Username</label>
+                        <div class="input-container">
+                            <input asp-for="Input.Email" class="form-controls" autocomplete="username" aria-required="true" />
+                            <img src="~/images/users.png" class="input-icons" alt="username icon" />
+                        </div>
+                        <span asp-validation-for="Input.Email" class="text-danger"></span>
+                    </div>
+
                     <br />
-              
-                    <label class="form-label">Password</label>
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <div class="input-container">
+                            <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
+                            <img src="~/images/lock.png" class="input-icon" alt="password icon" />
+                        </div>
+                        <span asp-validation-for="Input.Password" class="text-danger"></span>
+                    </div>
                
                     <br />
                     <a class="passwords" id="forgot-password" asp-page="./ForgotPassword">Forget password?</a>

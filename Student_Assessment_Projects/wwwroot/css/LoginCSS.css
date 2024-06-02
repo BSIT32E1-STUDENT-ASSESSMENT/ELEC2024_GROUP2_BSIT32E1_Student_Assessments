@@ -72,6 +72,19 @@
     background-color: rgba(35, 49, 66, 1);
     margin-top: -15px;
     margin-left: 43px;
+    margin-bottom: -9px;
+}
+
+.form-controls {
+    width: 300px;
+    height: 42px;
+    gap: 0px;
+    border-radius: 10px;
+    border: 3px;
+    background-color: rgba(35, 49, 66, 1);
+    margin-top: -15px;
+    margin-left: 43px;
+    margin-bottom: -9px;
 }
 
 .login-image {
@@ -114,4 +127,32 @@
     text-align: center;
     color: rgba(35, 49, 66, 1);
     margin-left: 90px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-icon {
+    height: 23px;
+    position: absolute;
+    top: 50%;
+    left: 313px; /* Adjust the left value as needed */
+    transform: translateY(-50%);
+    pointer-events: none; /* So the image doesn't block input field clicks */
+}
+
+.input-icons {
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 310px; /* Adjust the left value as needed */
+    transform: translateY(-50%);
+    pointer-events: none; /* So the image doesn't block input field clicks */
+}
+
+.input-container input {
+    padding-left: 20px; /* Adjust the padding to make space for the icon */
+    color: white;
+    font-family: Roboto;
 }
