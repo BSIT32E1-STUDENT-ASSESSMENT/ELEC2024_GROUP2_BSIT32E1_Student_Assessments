@@ -1,16 +1,18 @@
-﻿body {
+﻿@import url('https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap');
+
+body {
     background-color: rgba(64, 117, 173, 1);
 }
 
 .login-container {
     position: relative;
-    margin-top: 38px;
-    margin-bottom: -20px;
+    margin-top: -650px;
+    margin-bottom: -30px;
     width: 105%;
     display: flex;
     justify-content: right;
     align-items: center;
-    margin-left: -250px;
+    margin-left: -150px;
 
 }
 
@@ -48,6 +50,22 @@
     color: rgba(35, 49, 66, 1);
 }
 
+.form-labels {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    margin-top: -70px;
+    margin-left: 50px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
 .passwords {
     font-family: Roboto;
     font-size: 15px;
@@ -60,7 +78,8 @@
 }
 
 .text-danger {
-    background-color: rgba(35, 49, 66, 1);
+   margin-left: 50px;
+   font-size: 13px;
 }
 
 .form-control {
@@ -72,10 +91,10 @@
     background-color: rgba(35, 49, 66, 1);
     margin-top: -15px;
     margin-left: 43px;
-    margin-bottom: -9px;
+    margin-bottom: -4px;
 }
 
-.form-controls {
+.form-controlss {
     width: 300px;
     height: 42px;
     gap: 0px;
@@ -84,7 +103,7 @@
     background-color: rgba(35, 49, 66, 1);
     margin-top: -15px;
     margin-left: 43px;
-    margin-bottom: -9px;
+    margin-bottom: -4px;
 }
 
 .login-image {
@@ -154,5 +173,29 @@
 .input-container input {
     padding-left: 20px; /* Adjust the padding to make space for the icon */
     color: white;
+    background-color: rgba(35, 49, 66, 1);
     font-family: Roboto;
+}
+
+p {
+    font-family: 'Solway', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 48px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: white;
+    margin-right: 700px;
+    margin-top: 100px;
+    margin-left: 16px;
+}
+
+.text-centers img {
+    width: 400px;
+    height: 400px;
+    margin-top: 10px;
+    left: 136px;
+    gap: 0px;
+    opacity: 0px;
+    margin-left: 65px;
 }
