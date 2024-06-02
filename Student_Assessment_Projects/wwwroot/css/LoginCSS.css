@@ -12,7 +12,7 @@ body {
     display: flex;
     justify-content: right;
     align-items: center;
-    margin-left: -150px;
+    margin-left: -160px;
 
 }
 
@@ -185,9 +185,9 @@ p {
     letter-spacing: 0.15em;
     text-align: center;
     color: white;
-    margin-right: 700px;
+    margin-right: 620px;
     margin-top: 100px;
-    margin-left: 16px;
+    margin-left: 18px;
 }
 
 .text-centers img {
@@ -197,5 +197,5 @@ p {
     left: 136px;
     gap: 0px;
     opacity: 0px;
-    margin-left: 65px;
+    margin-left: 140px;
 }
