@@ -2,8 +2,6 @@
 using Student_Assessment_Projects.Models;
 using System.Collections.Generic;
 using System.Web;
-using Student_Assessment_Projects.Models;
-
 namespace Student_Assessment_Projects.Controllers
 {
     public class AdviserModuleController : Controller
