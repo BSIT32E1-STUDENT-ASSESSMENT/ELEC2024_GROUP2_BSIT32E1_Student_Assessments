@@ -17,3 +17,28 @@
         });
     </script>
 </head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="~/images/schoollogo.jpg" alt="School Logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="@Url.Action("Index", "Dashboard")"><img src="~/images/sidebar_icon2.png" alt="Adviser Module Icon" class="sidebar-icon">Dashboard</a></li>
+                    <li><a href="@Url.Action("Index", "AdviserModule")"><img src="~/images/sidebar_icon3.png" alt="Adviser Module Icon" class="sidebar-icon">Adviser Module</a></li>
+                    <li><a href="@Url.Action("Index", "Students")"><img src="~/images/sidebar_icon1.png" alt="Adviser Module Icon" class="sidebar-icon">Students</a></li>
+                </ul>
+
+                <div class="logout">
+                    <a href="@Url.Action("Logout", "Account")">Logout</a>
+                </div>
+            </nav>
+
+        </aside>
+        <main class="main-content">
+            @RenderBody()
+        </main>
+    </div>
+</body>
+</html>
