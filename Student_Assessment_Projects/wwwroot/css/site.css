@@ -26,3 +26,63 @@ body {
         .sidebar .logo img {
             width: 180px;
         }
+
+    .sidebar nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        padding-top: 0px;
+        padding-bottom: 400px;
+    }
+
+        .sidebar nav ul li {
+            margin: 20px 0;
+        }
+
+            .sidebar nav ul li a {
+                text-decoration: none;
+                color: #333;
+                font-size: 25px;
+                display: block;
+                align-items: center;
+            }
+
+                .sidebar nav ul li a img.sidebar-icon {
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 20px;
+                }
+
+                .sidebar nav ul li a:hover {
+                    color: #4C50A9;
+                    background-color: #EBE8FC;
+                    border-radius: 5px;
+                    padding: 10px;
+                    font-weight: bold;
+                }
+
+.logout {
+    margin-top: auto;
+    text-align: center;
+}
+
+    .logout a {
+        text-decoration: none;
+        color: #333;
+        font-size: 20px;
+        display: block;
+        padding: 13px;
+        background-color: #4C50A9;
+        color: #fff;
+        border-radius: 5px;
+    }
+
+        .logout a:hover {
+            background-color: mediumpurple;
+        }
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
