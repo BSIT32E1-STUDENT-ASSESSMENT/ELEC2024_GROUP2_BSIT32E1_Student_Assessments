@@ -1,0 +1,14 @@
+﻿@model Student_Assessment_Projects.Models.Student
+
+<h2>Student Dashboard</h2>
+
+<p>Welcome, @Model.FullName</p>
+<p>Your recommended strand: @ViewBag.Strand</p>
+
+<h3>Your Grades</h3>
+<ul>
+    @foreach (var grade in Model.Grades)
+    {
+        <li>@grade.Subject (Year @grade.Year): @grade.Score</li>
+    }
+</ul>
