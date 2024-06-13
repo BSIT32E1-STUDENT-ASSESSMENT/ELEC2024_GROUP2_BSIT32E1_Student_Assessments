@@ -1,69 +1,232 @@
-﻿body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
+﻿@import url('https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap');
+
+body {
+    background-color: rgba(64, 117, 173, 1);
+}
+
+
+.register-container {
+    position: relative;
+    margin-top: -590px;
+    width: 140%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0;
+    margin-left: -140px;
+
 }
 
-.container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+/* white bg in login form */
+.background-image {
+    background-image: url('~/images/Rectangle 1.png');
+    width: 350px;
+    height: 360px;
+    gap: 0px;
+    border-radius: 15px;
+    border: 1px 0px 0px 0px;
 }
 
-h1 {
+.background-images {
+    margin-top: -5px;
+}
+
+.form-section {
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8); /* Optional: Add background to the form */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    margin-left: 50px;
+    margin-top: 5px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
+.form-labels {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: -5px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
+.form-labelss {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    margin-left: 1px;
+    margin-top: 15px;
+    margin-bottom: -3px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
+.form-labelsss {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    margin-left: -1px;
+    margin-top: 5px;
+    margin-bottom: -3px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
+
+
+.text-danger {
+    margin-left: 50px;
+    font-size: 13px;
+}
+
+.form-control {
+    width: 300px;
+    height: 35px;
+    gap: 0px;
+    border-radius: 10px;
+    border: 3px;
+    background-color: rgba(35, 49, 66, 1);
+    margin-top: -15px;
+    margin-left: 43px;
+    margin-bottom: -15px;
+}
+
+.form-controlss {
+    width: 300px;
+    height: 35px;
+    gap: 0px;
+    border-radius: 10px;
+    border: 3px;
+    background-color: rgba(35, 49, 66, 1);
+    margin-top: -15px;
+    margin-left: 43px;
+    margin-bottom: -100px;
+}
+
+.login-image {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    left: 937px;
+    gap: 0px;
+}
+
+.customs-button {
+    width: 300px;
+    height: 42px;
+    border-radius: 15px;
+    margin-left: -8px;
+    opacity: 1; /* Assuming you want the button to be visible, if not set to 0 */
+    position: relative;
+    background-color: rgba(249, 89, 89, 1);
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 28.13px;
+    letter-spacing: 0.10em;
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    box-sizing: border-box;
-}
-
-button[type="submit"] {
-    background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
 }
 
-    button[type="submit"]:hover {
-        background-color: #3e8e41;
+    .customs-button:hover {
+        background-color: #ff4a48;
+        color: white;
     }
+
+
+.input-container {
+    position: relative;
+}
+
+.Login {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18.75px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: rgba(35, 49, 66, 1);
+    margin-left: 115px;
+}
+
+.input-icon {
+    height: 23px;
+    position: absolute;
+    top: 50%;
+    left: 313px; /* Adjust the left value as needed */
+    transform: translateY(-50%);
+    pointer-events: none; /* So the image doesn't block input field clicks */
+}
+
+.input-icons {
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 310px; /* Adjust the left value as needed */
+    transform: translateY(-50%);
+    pointer-events: none; /* So the image doesn't block input field clicks */
+}
+
+.input-container input {
+    padding-left: 20px; /* Adjust the padding to make space for the icon */
+    color: white;
+    background-color: rgba(35, 49, 66, 1);
+    font-family: Roboto;
+}
 
 p {
+    font-family: 'Solway', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 48px;
+    letter-spacing: 0.15em;
     text-align: center;
-    margin-top: 15px;
+    color: white;
+    margin-right: -150px;
+    margin-top: 60px;
+    margin-left: 400px;
 }
 
-a {
-    color: #4CAF50;
-    text-decoration: none;
+.text-centers img {
+    width: 400px;
+    height: 400px;
+    margin-top: -5px;
+    left: 136px;
+    gap: 0px;
+    margin-left: 600px;
+    margin-bottom: -50px;
 }
-
-    a:hover {
-        text-decoration: underline;
-    }
