@@ -7,23 +7,23 @@ body {
 
 .register-container {
     position: relative;
-    margin-top: -630px;
+    margin-top: -590px;
     width: 140%;
     display: flex;
     justify-content: left;
     align-items: center;
     margin-left: -140px;
+
 }
 
 /* white bg in login form */
 .background-image {
     background-image: url('~/images/Rectangle 1.png');
     width: 350px;
-    height: 450px;
+    height: 360px;
     gap: 0px;
     border-radius: 15px;
     border: 1px 0px 0px 0px;
-    margin-bottom: -80px;
 }
 
 .background-images {
@@ -224,8 +224,9 @@ p {
 .text-centers img {
     width: 400px;
     height: 400px;
-    margin-top: 5px;
+    margin-top: -5px;
     left: 136px;
     gap: 0px;
     margin-left: 600px;
+    margin-bottom: -50px;
 }
