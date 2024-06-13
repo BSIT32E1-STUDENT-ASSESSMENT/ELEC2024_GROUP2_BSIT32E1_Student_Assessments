@@ -19,7 +19,7 @@ namespace Student_Assessment_Projects.Controllers
             return View();
         }
 
-        public IActionResult Index()
+        public IActionResult Adviser()
         {
             return View();
         }
