@@ -19,13 +19,13 @@ body {
     justify-content: space-between;
 }
 
-    .sidebar .logo {
+    /*.sidebar .logo {
         text-align: center;
     }
 
         .sidebar .logo img {
             width: 180px;
-        }
+        }*/
 
     .sidebar nav ul {
         list-style-type: none;
