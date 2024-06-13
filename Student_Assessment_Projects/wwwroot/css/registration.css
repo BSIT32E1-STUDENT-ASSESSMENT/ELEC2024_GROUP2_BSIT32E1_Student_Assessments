@@ -78,7 +78,7 @@ body {
     height: 34px;
     margin-left: 1px;
     margin-top: 15px;
-    margin-bottom: -5px;
+    margin-bottom: -3px;
     font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
@@ -93,9 +93,9 @@ body {
     font-weight: bold;
     width: 402px;
     height: 34px;
-    margin-left: 1px;
+    margin-left: -1px;
     margin-top: 5px;
-    margin-bottom: -5px;
+    margin-bottom: -3px;
     font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
