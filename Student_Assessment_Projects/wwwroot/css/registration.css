@@ -89,9 +89,9 @@ body {
     margin-top: -630px;
     width: 140%;
     display: flex;
-    justify-content: right;
+    justify-content: left;
     align-items: center;
-    margin-left: -300px;
+    margin-left: -140px;
 }
 /* white bg in login form */
 .background-image {
