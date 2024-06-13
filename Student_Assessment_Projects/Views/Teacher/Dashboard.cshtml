@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Student_Assessment_Projects.Models.Student>
+
+<h2>Teacher Dashboard</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Grades</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr>
+                <td>@student.FullName</td>
+                <td>@student.Email</td>
+                <td>
+                    <ul>
+                        @foreach (var grade in student.Grades)
+                        {
+                            <li>@grade.Subject: @grade.Score</li>
+                        }
+                    </ul>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
