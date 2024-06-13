@@ -61,6 +61,8 @@
                             </div>
                             <span asp-validation-for="Input.Password" class="text-danger"></span>
 
+                            <br />
+
                             <label class="form-label">Confirm Password</label>
                             <div class="input-container">
                                 <input class="form-controlss" autocomplete="current-password" aria-required="true" />
@@ -69,15 +71,12 @@
 
                             <span asp-validation-for="Input.Password" class="text-danger"></span>
 
-                            <br />
-                            <a class="passwords" id="forgot-password" asp-page="./ForgotPassword">Forget password?</a>
 
-
-                            <button id="login-submit" type="submit" class="btn custom-button">LOG IN</button>
+                            <button id="login-submit" type="submit" class="btn custom-button">REGISTER</button>
 
 
 
-                            <a class="Register" asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Don’t have an account? Register</a>
+                            <a class="login" asp-page="./Login" asp-route-returnUrl="@Model.ReturnUrl">Already have account?</a>
 
 
                         </form>
