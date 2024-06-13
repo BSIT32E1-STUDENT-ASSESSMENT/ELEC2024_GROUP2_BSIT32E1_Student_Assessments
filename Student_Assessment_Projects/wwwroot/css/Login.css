@@ -7,7 +7,7 @@ body {
 
 .login-container {
     position: relative;
-    margin-top: -630px;
+    margin-top: -620px;
     width: 140%;
     display: flex;
     justify-content: right;
@@ -19,11 +19,10 @@ body {
 .background-image {
     background-image: url('~/images/Rectangle 1.png');
     width: 350px;
-    height: 412px;
+    height: 300px;
     gap: 0px;
     border-radius: 15px ;
     border: 1px 0px 0px 0px;
-    margin-bottom: -80px;
 }
 
 .form-section {
@@ -193,7 +192,7 @@ p {
 .text-centers img {
     width: 400px;
     height: 400px;
-    margin-top: 10px;
+    margin-top: -5px;
     left: 136px;
     gap: 0px;
     margin-left: -55px;
