@@ -84,7 +84,7 @@ body {
 }
 
 
-.login-container {
+.register-container {
     position: relative;
     margin-top: -630px;
     width: 140%;
@@ -265,7 +265,7 @@ p {
     color: white;
     margin-right: -150px;
     margin-top: 60px;
-    margin-left: 450px;
+    margin-left: 400px;
 }
 
 .text-centers img {
