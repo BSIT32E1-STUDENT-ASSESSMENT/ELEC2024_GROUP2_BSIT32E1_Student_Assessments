@@ -66,6 +66,41 @@ body {
     color: rgba(35, 49, 66, 1);
 }
 
+.form-labelss {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    margin-left: 1px;
+    margin-top: 15px;
+    margin-bottom: -5px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
+.form-labelsss {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    margin-left: 1px;
+    margin-top: 5px;
+    margin-bottom: -5px;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
+
 
 .text-danger {
     margin-left: 50px;
@@ -104,16 +139,16 @@ body {
     gap: 0px;
 }
 
-.custom-button {
+.customs-button {
     width: 300px;
     height: 42px;
     border-radius: 15px;
-    margin-left: 43px;
+    margin-left: -8px;
     opacity: 1; /* Assuming you want the button to be visible, if not set to 0 */
     position: relative;
     background-color: rgba(249, 89, 89, 1);
     margin-bottom: 15px;
-    margin-top: 15px;
+    margin-top: 20px;
     font-family: Roboto;
     font-size: 20px;
     line-height: 28.13px;
@@ -122,21 +157,11 @@ body {
     color: white;
 }
 
-    .custom-button:hover {
+    .customs-button:hover {
         background-color: #ff4a48;
         color: white;
     }
 
-.Register {
-    font-family: Roboto;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 18.75px;
-    letter-spacing: 0.05em;
-    text-align: center;
-    color: rgba(35, 49, 66, 1);
-    margin-left: 90px;
-}
 
 .input-container {
     position: relative;
