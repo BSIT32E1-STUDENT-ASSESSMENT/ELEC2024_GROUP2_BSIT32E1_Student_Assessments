@@ -20,97 +20,132 @@
 
         .header {
             display: flex;
+            justify-content: space-between; /* Space between logo and right-side elements */
             align-items: center;
             padding: 20px;
-            background-color: #fff;
+            background-color: #f4f4f4;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-            /* .header .logo {
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #fff;
+            margin-right: 20px; /* Space between search bar and notification button */
+        }
+
+            .header .search-bar input[type="text"] {
+                padding: 10px;
+                border: none;
+                outline: none;
                 flex: 1;
             }
 
-                .header .logo img {
-                    height: 50px;
-                } */
-
-            .header .search-bar {
-                display: flex;
-                align-items: center;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                overflow: hidden;
-                background-color: #fff;
+            .header .search-bar button {
+                background-color: transparent;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
             }
 
-                .header .search-bar input[type="text"] {
-                    padding: 10px;
-                    border: none;
-                    outline: none;
-                    flex: 1;
-                }
+        .header .header-right button {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-left: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
 
-                .header .search-bar button {
-                    background-color: transparent;
-                    border: none;
-                    padding: 10px;
-                    cursor: pointer;
-                }
-
-            .header .header-right {
-                display: flex;
-                align-items: center;
+            .header .header-right button i {
+                font-size: 16px;
             }
 
-                .header .header-right button {
-                    background-color: #fff;
-                    border: 1px solid #ddd;
-                    border-radius: 4px;
-                    margin-left: 10px;
-                    padding: 10px;
-                    cursor: pointer;
+        .header .user-info {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+            .header .user-info img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .header .user-info .user-details {
+                display: flex;
+                flex-direction: column;
+            }
+
+                .header .user-info .user-details .name {
+                    font-weight: bold;
                 }
 
-                    .header .header-right button i {
-                        font-size: 16px;
-                    }
-
-                .header .header-right .user-profile {
-                    display: flex;
-                    align-items: center;
-                    margin-left: 20px;
+                .header .user-info .user-details .role {
+                    color: #666;
                 }
 
-                    .header .header-right .user-profile img {
-                        height: 40px;
-                        border-radius: 50%;
-                        margin-right: 10px;
-                    }
+        .date-time {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #673ab7;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+            .date-time h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+
+            .date-time h2 {
+                margin: 5px 0 0 0;
+                font-size: 20px;
+            }
     </style>
     <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="header">
-        @* <div class="logo">
-            <img src="~/Images/logo.png" alt="Logo">
-        </div> *@
-        <div class="search-bar">
-            <input type="text" placeholder="Search Dashboard">
-            <button type="submit"><i class="fas fa-search"></i></button>
-        </div>
         <div class="header-right">
+            <div class="search-bar">
+                <input type="text" placeholder="Search Dashboard">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
             <button class="notification-btn">
                 <i class="fas fa-bell"></i>
             </button>
             <button class="message-btn">
                 <i class="fas fa-comment"></i>
             </button>
-            <div class="user-profile">
-                <img src="~/Images/user-profile.png" alt="User Profile">
-                <span>Aubrey Villareal</span>
+            <div class="user-info">
+                <img src="~/Content/Images/user-avatar.png" alt="User Avatar">
+                <div class="user-details">
+                    <div class="name">Aubrey Villareal</div>
+                    <div class="role">Adviser Name</div>
+                </div>
             </div>
         </div>
+    </div>
+
+    <div class="date-time">
+        <h1>Today's Date : @DateTime.Now.ToString("MMMM dd, yyyy")</h1>
+        <h2>Today's Time : @DateTime.Now.ToString("hh:mm tt")</h2>
     </div>
 </body>
 </html>
