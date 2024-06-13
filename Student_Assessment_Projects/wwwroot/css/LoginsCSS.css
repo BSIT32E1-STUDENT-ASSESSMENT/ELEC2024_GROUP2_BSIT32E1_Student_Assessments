@@ -4,17 +4,18 @@ body {
     background-color: rgba(64, 117, 173, 1);
 }
 
+
 .login-container {
     position: relative;
-    margin-top: -660px;
+    margin-top: -630px;
     width: 140%;
     display: flex;
     justify-content: right;
     align-items: center;
-    margin-left: -330px;
+    margin-left: -300px;
 
 }
-
+/* white bg in login form */
 .background-image {
     background-image: url('~/images/Rectangle 1.png');
     width: 350px;
@@ -22,7 +23,7 @@ body {
     gap: 0px;
     border-radius: 15px ;
     border: 1px 0px 0px 0px;
-    margin-bottom: -120px;
+    margin-bottom: -80px;
 }
 
 .form-section {
@@ -108,7 +109,7 @@ body {
 .login-image {
     width: 150px;
     height: 150px;
-    margin-top: 50px;
+    margin-top: 10px;
     left: 937px;
     gap: 0px;
 }
@@ -184,8 +185,8 @@ p {
     letter-spacing: 0.15em;
     text-align: center;
     color: white;
-    margin-right: 520px;
-    margin-top: 100px;
+    margin-right: 450px;
+    margin-top: 60px;
     margin-left: -150px;
 }
 
@@ -196,5 +197,5 @@ p {
     left: 136px;
     gap: 0px;
     opacity: 0px;
-    margin-left: -65px;
+    margin-left: -55px;
 }
