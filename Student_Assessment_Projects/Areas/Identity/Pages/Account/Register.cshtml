@@ -30,21 +30,21 @@
                            
 
 
-                            <br />
+                            @* <br /> *@
 
-                            <label class="form-label">Firstname</label>
+                            <label class="form-labels">Firstname</label>
                             <div class="input-container">
                                 <input class="form-controlss" autocomplete="firstname" aria-required="true" />
                                 <img src="~/images/users.png" class="input-icons" alt="username icon" />
                             </div>
 
 
-                            <br />
+                           @*  <br /> *@
 
 
                             <label class="form-label">Username</label>
                             <div class="input-container">
-                                <input asp-for="Input.Email" class="form-controlss" autocomplete="username" aria-required="true" />
+                                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
                                 <img src="~/images/users.png" class="input-icons" alt="username icon" />
                             </div>
 
@@ -52,9 +52,7 @@
 
 
                             <br />
-
-
-                            <label class="form-label">Password</label>
+                            <label class="form-labels">Password</label>
                             <div class="input-container">
                                 <input asp-for="Input.Password" class="form-controlss" autocomplete="current-password" aria-required="true" />
                                 <img src="~/images/lock.png" class="input-icon" alt="password icon" />
@@ -62,8 +60,7 @@
                             <span asp-validation-for="Input.Password" class="text-danger"></span>
 
                             <br />
-
-                            <label class="form-label">Confirm Password</label>
+                            <label class="form-labels">Confirm Password</label>
                             <div class="input-container">
                                 <input class="form-controlss" autocomplete="current-password" aria-required="true" />
                                 <img src="~/images/lock.png" class="input-icon" alt="password icon" />

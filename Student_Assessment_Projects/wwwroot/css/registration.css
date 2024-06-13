@@ -38,8 +38,8 @@ body {
     font-weight: bold;
     width: 402px;
     height: 34px;
-    top: 456px;
     margin-left: 50px;
+    margin-top: 5px;
     font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
@@ -49,32 +49,23 @@ body {
     color: rgba(35, 49, 66, 1);
 }
 
-/*.form-labels {
+.form-labels {
     margin-bottom: 0.5rem;
     font-weight: bold;
     width: 402px;
     height: 34px;
-    margin-top: -70px;
     margin-left: 50px;
+    margin-top: 15px;
+    margin-bottom: -5px;
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     line-height: 25.78px;
     letter-spacing: 0.15em;
     text-align: left;
     color: rgba(35, 49, 66, 1);
-}*/
-
-.passwords {
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 21.09px;
-    letter-spacing: 0.05em;
-    text-align: center;
-    color: rgba(35, 49, 66, 1);
-    margin-left: 200px;
 }
+
 
 .text-danger {
     margin-left: 50px;
@@ -83,26 +74,26 @@ body {
 
 .form-control {
     width: 300px;
-    height: 42px;
+    height: 35px;
     gap: 0px;
     border-radius: 10px;
     border: 3px;
     background-color: rgba(35, 49, 66, 1);
     margin-top: -15px;
     margin-left: 43px;
-    margin-bottom: -4px;
+    margin-bottom: -15px;
 }
 
 .form-controlss {
     width: 300px;
-    height: 42px;
+    height: 35px;
     gap: 0px;
     border-radius: 10px;
     border: 3px;
     background-color: rgba(35, 49, 66, 1);
     margin-top: -15px;
     margin-left: 43px;
-    margin-bottom: -4px;
+    margin-bottom: -100px;
 }
 
 .login-image {
