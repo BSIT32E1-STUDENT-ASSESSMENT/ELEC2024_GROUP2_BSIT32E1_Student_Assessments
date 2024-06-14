@@ -28,7 +28,7 @@
             }
         </tbody>
     </table>
-</div>
+
 <hr>
 <ul>
     @foreach (var grade in Model.Grades)
@@ -36,3 +36,17 @@
         <li>@grade.Subject (Year @grade.Year): @grade.Score</li>
     }
 </ul>
+    <div class="result-suggestions">
+        <h3>Result Strand Suggestion:</h3>
+        <div class="suggestions">
+            <div class="primary">
+                <h4>Primary</h4>
+                <img src="/images/Stem.png" alt="STEM Logo" class="primary-img">
+            </div>
+            <div class="secondary">
+                <h4>Secondary</h4>
+                <img src="/images/Humss.png" alt="HUMSS Logo" class="secondary-img">
+            </div>
+        </div>
+    </div>
+</div>
