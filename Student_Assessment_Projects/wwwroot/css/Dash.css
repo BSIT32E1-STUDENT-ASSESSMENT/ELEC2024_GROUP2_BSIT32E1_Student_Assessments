@@ -1,0 +1,75 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 5rem auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 1px rgba(112, 108, 108, 0.1);
+    border-radius: 10px;
+}
+
+hr {
+    opacity: 1;
+    margin: 12px 0;
+}
+
+.student-info {
+    background-color: #233142;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.grades table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.grades th, .grades td {
+    border: 1px solid #aebfc7; 
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.result-suggestions {
+    color: white;
+    background-color: #233142;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 90%;
+    border-radius: 10px;
+}
+
+    .result-suggestions h3, .result-suggestions h4 {
+        margin: 0 0 10px;
+        color: white;
+    }
+
+.suggestions {
+    display: flex;
+    justify-content: space-around;
+}
+
+    .suggestions .primary, .suggestions .secondary {
+        text-align: center;
+    }
+
+.primary-img {
+    width: 70%;
+    height: auto;
+}
+
+.secondary-img {
+    width: 50%;
+    height: auto;
+}
