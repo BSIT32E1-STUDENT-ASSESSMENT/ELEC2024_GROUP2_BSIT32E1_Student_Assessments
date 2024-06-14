@@ -2,12 +2,21 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+  
 }
 
 header {
-   /* background-color: #173a8a;*/
-    color: #fff;
-    padding: 0 6rem;
+    /* background-color: #173a8a;*/
+    /*color: #fff;
+    padding: 0 6rem;*/
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0;
+    z-index: 10;
+    padding: 0 10px;
+    background-color: #0066cc;
+    opacity: 0.9;
 }
 
 .container {
@@ -57,7 +66,8 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-image: url('../images/lyceum_bg-removebg-preview (2).png');
+    /* background-image: url('../images/lyceum_bg-removebg-preview (2).png');*/
+    background: url("/images/Outline.png") center/cover no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
