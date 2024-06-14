@@ -1,0 +1,76 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    @* NEW COMMENT  *@
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/Dashboard/Dashboard.css">
+    <link rel="stylesheet" href="css/Dashboard/Boostrap.css">
+    <script>
+        $(document).ready(function () {
+            $("nav ul li a").click(function (e) {
+                e.preventDefault();
+                var url = $(this).attr("href");
+                $.get(url, function (data) {
+                    $(".main-content").html($(data).find(".main-content").html());
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <aside class="sidebar">
+             <div class="logo">
+            @* <img src="~/images/schoollogo.jpg" alt="School Logo" /> *@  @* logo remove *@
+            </div> 
+            <nav>
+            <ul>
+            @* <li><a href="@Url.Action("Dashboard", "Adviser")" asp-controller="Home" asp-action="Dashboard"><img src="~/images/sidebar_icon2.png" alt="Adviser Module Icon" class="sidebar-icon">Dashboard</a></li>
+            <li><a href="@Url.Action("Adviser", "Adviser")"><img src="~/images/sidebar_icon3.png" alt="Adviser Module Icon" class="sidebar-icon">Adviser Module</a></li>
+            <li><a href="@Url.Action("Students", "Adviser")"><img src="~/images/sidebar_icon1.png" alt="Adviser Module Icon" class="sidebar-icon">Students</a></li>  *@
+                    
+            
+            <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Dashboard"> 
+                        <img src="~/images/sidebar_icon2.png" alt="Adviser Module Icon" class="sidebar-icon"> Dashboard
+                        </a>
+            </li>
+
+            <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Adviser">
+                        <img src="~/images/sidebar_icon3.png" alt="Adviser Module Icon" class="sidebar-icon"> Adviser
+                        </a>
+             </li>
+
+            <li class="nav-item">
+                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Students">
+                         <img src="~/images/sidebar_icon1.png" alt="Adviser Module Icon" class="sidebar-icon">Students
+                         </a>
+            </li>
+
+            </ul>
+
+            <div class="logout">
+            <a href="@Url.Action("Logout", "Account")">Logout</a>
+            </div>
+            </nav>
+
+            </aside>
+            <main class="main-content">
+            @RenderBody()
+            </main>
+          </div>
+       </body>
+ </html> 
+
+
