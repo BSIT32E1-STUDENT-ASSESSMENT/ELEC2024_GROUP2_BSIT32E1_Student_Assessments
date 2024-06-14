@@ -3,6 +3,8 @@
     Layout = "~/Views/Shared/_Adviser.cshtml";
 }
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +20,9 @@
             background-color: #f5f5f5;
         }
 
-        .header {
+        .header { 
+
+
             display: flex;
             justify-content: space-between; /* Space between logo and right-side elements */
             align-items: center;
@@ -117,12 +121,21 @@
                 font-size: 20px;
             }
 
+
+
+        .container {
+            display: flex;
+            justify-content: space-between; /* Aligns items with space between them */
+            max-width: 1000px; /* Adjust container width as needed */
+            margin: 20px auto; /* Center the container and provide some margin */
+        }
+
         .student-list {
-            margin: 20px;
-            padding: 20px;
             background-color: #fff;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 45%; /* Adjust width based on desired layout */
         }
 
         .student {
@@ -146,6 +159,44 @@
                 .student .student-details .name {
                     font-weight: bold;
                 }
+
+        .suggestions-tracking {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 45%; /* Adjust width based on desired layout */
+            text-align: center;
+        }
+
+            .suggestions-tracking h4 {
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+
+            .suggestions-tracking p.percentage {
+                font-size: 3em;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #4CAF50;
+            }
+
+            .suggestions-tracking p.low {
+                color: #FFC107;
+            }
+
+            .suggestions-tracking p.very-low {
+                color: #F44336;
+            }
+
+            .suggestions-tracking p {
+                margin: 5px 0;
+            }
+
+
+
+
+
     </style>
     <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -179,6 +230,61 @@
     </div>
 
 
+    <div class="container">
+        <div class="student-list">
+            <div>Students</div>
+            <div class="student">
+                <img src="~/images/boy.png" alt="Student 1">
+                <div class="student-details">
+                    <div class="name">Student 1</div>
+                </div>
+            </div>
+            <div class="student">
+                <img src="~/images/human.png" alt="Student 2">
+                <div class="student-details">
+                    <div class="name">Student 2</div>
+                </div>
+            </div>
+            <div class="student">
+                <img src="~/images/boy (1).png" alt="Student 3">
+                <div class="student-details">
+                    <div class="name">Student 3</div>
+                </div>
+            </div>
+            <!-- Add more students as needed -->
+        </div>
+
+        <div class="suggestions-tracking">
+            <h4>Strand Suggestions Tracking</h4>
+            <p class="percentage">60.04%</p>
+            <p>Total Suggestions: 6579</p>
+            <div class="category">
+                <p>STEM: 650</p>
+                <p>GAS: 650</p>
+                <p>TVL: 650</p>
+                <p>ABM: 650</p>
+                <p>HUMMS: 650</p>
+            </div>
+        </div>
+    </div>
+
+
+   @*  <div class="suggestions-tracking">
+        <h4>Strand Suggestions Tracking</h4>
+        <p class="percentage">60.04%</p>
+        <p>Total Suggestions: 6579</p>
+        <div class="category">
+            <p>STEM: 650</p>
+            <p>GAS: 650</p>
+            <p>TVL: 650</p>
+            <p>ABM: 650</p>
+            <p>HUMMS: 650</p>
+        </div>
+    </div>
+
+  
+
+
     <div class="student-list">
         <div>Students</div>
         <div class="student">
@@ -198,7 +304,7 @@
             <div class="student-details">
                 <div class="name">Student 3</div>
             </div>
-        </div>
+        </div> *@
         <!-- Add more students as needed -->
     </div>
 </body>
