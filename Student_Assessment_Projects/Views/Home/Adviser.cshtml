@@ -140,9 +140,11 @@
                         background-color: white;
                         color: black;
                         font-size: 16px;
+                        border: 2px solid/* Add border here */
                     }
 
                         .section-header .actions button.export:hover {
+                            background-color: #e7e7e7; /* Change hover background color if needed */
                         }
 
 
@@ -155,6 +157,48 @@
                         .section-header .actions button.add-new:hover {
                             background-color: #e7e7e7;
                         }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            table th, table td {
+                padding: 10px;
+                border: 1px solid #e0e0e0;
+                text-align: left;
+            }
+
+            table th {
+                background-color: #f4f4f4;
+            }
+
+        input[type="checkbox"] {
+            accent-color: purple; /* This should work in modern browsers */
+        }
+
+            input[type="checkbox"]::before {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background-color: white;
+                border: 1px solid #e0e0e0;
+                border-radius: 2px;
+                box-sizing: border-box;
+            }
+
+            input[type="checkbox"]:checked::before {
+                background-color: purple; /* Fallback for older browsers */
+                content: '\2713'; /* Checkmark symbol */
+                color: white;
+                text-align: center;
+                line-height: 16px;
+                font-size: 14px;
+            }
+
+
+
     </style>
 
 </head>
@@ -187,84 +231,76 @@
                         <button class="add-new"><i class="fas fa-plus"></i> Add New</button>
                     </div>
                 </div>
-                <table>
-                    <thead>
-                        <tr>
-                            <th><input type="checkbox"></th>
-                            <th class="sortable">Subject Code &#x25BC;</th>
-                            <th class="sortable">Subjects &#x25BC;</th>
-                            <th class="sortable">Final grades 7 &#x25BC;</th>
-                            <th class="sortable">Final Grades 8 &#x25BC;</th>
-                            <th class="sortable">Final Grades 9 &#x25BC;</th>
-                            <th class="sortable">Final Grades 10 &#x25BC;</th>
-                            <th class="sortable">Strand &#x25BC;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Table rows go here -->
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox"></th>
+                                <th class="sortable">Subject Code &#x25BC;</th>
+                                <th class="sortable">Subjects &#x25BC;</th>
+                                <th class="sortable">Final grades 7 &#x25BC;</th>
+                                <th class="sortable">Final Grades 8 &#x25BC;</th>
+                                <th class="sortable">Final Grades 9 &#x25BC;</th>
+                                <th class="sortable">Final Grades 10 &#x25BC;</th>
+                                <th class="sortable">Strand &#x25BC;</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Table rows go here -->
 
-                        <tr>
-                            <td><input type="checkbox" checked></td>
-                            <td>Sci01</td>
-                            <td>Science</td>
-                            <td>90</td>
-                            <td>98</td>
-                            <td>91</td>
-                            <td>93</td>
-                            <td>STEM</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" checked></td>
-                            <td>Eng01</td>
-                            <td>English</td>
-                            <td>89</td>
-                            <td>87</td>
-                            <td>86</td>
-                            <td>87</td>
-                            <td>Regular text column</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" checked></td>
-                            <td>Math03</td>
-                            <td>Mathematics</td>
-                            <td>85</td>
-                            <td>86</td>
-                            <td>87</td>
-                            <td>86</td>
-                            <td>Regular text column</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" checked></td>
-                            <td>His02</td>
-                            <td>History</td>
-                            <td>89</td>
-                            <td>90</td>
-                            <td>87</td>
-                            <td>89</td>
-                            <td>Regular text column</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" checked></td>
-                            <td>Fil04</td>
-                            <td>Filipino</td>
-                            <td>89</td>
-                            <td>91</td>
-                            <td>94</td>
-                            <td>91</td>
-                            <td>Regular text column</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>Bold text column</td>
-                            <td>Regular text column</td>
-                            <td>Regular text column</td>
-                            <td>Regular text column</td>
-                            <td>Regular text column</td>
-                            <td>Regular text column</td>
-                            <td>Regular text column</td>
-                        </tr>
-                    </tbody>
-                </table>
+                            <tr>
+                                <td><input type="checkbox" ></td>
+                                <td>Sci01</td>
+                                <td>Science</td>
+                                <td>90</td>
+                                <td>98</td>
+                                <td>91</td>
+                                <td>93</td>
+                                <td>STEM</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" ></td>
+                                <td>Eng01</td>
+                                <td>English</td>
+                                <td>89</td>
+                                <td>87</td>
+                                <td>86</td>
+                                <td>87</td>
+                                <td>HUMMS</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" ></td>
+                                <td>Math03</td>
+                                <td>Mathematics</td>
+                                <td>85</td>
+                                <td>86</td>
+                                <td>87</td>
+                                <td>86</td>
+                                <td>STEM</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" ></td>
+                                <td>His02</td>
+                                <td>History</td>
+                                <td>89</td>
+                                <td>90</td>
+                                <td>87</td>
+                                <td>89</td>
+                                <td>GAS</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" ></td>
+                                <td>Fil04</td>
+                                <td>Filipino</td>
+                                <td>89</td>
+                                <td>91</td>
+                                <td>94</td>
+                                <td>91</td>
+                                <td>ABM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 @* <div class="section-body">
                     <!-- Additional content goes here -->
