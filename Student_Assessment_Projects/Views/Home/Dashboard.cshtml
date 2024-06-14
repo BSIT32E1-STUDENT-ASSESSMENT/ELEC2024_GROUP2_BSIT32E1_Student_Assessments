@@ -116,6 +116,36 @@
                 margin: 5px 0 0 0;
                 font-size: 20px;
             }
+
+        .student-list {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .student {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+            .student img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .student .student-details {
+                display: flex;
+                flex-direction: column;
+            }
+
+                .student .student-details .name {
+                    font-weight: bold;
+                }
     </style>
     <!-- Include Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -146,6 +176,30 @@
     <div class="date-time">
         <h1>Today's Date : @DateTime.Now.ToString("MMMM dd, yyyy")</h1>
         <h2>Today's Time : @DateTime.Now.ToString("hh:mm tt")</h2>
+    </div>
+
+    
+    <div class="student-list">
+        <div>Students</div>
+        <div class="student">
+            <img src="~/Content/Images/student1.jpg" alt="Student 1">
+            <div class="student-details">
+                <div class="name">Student 1</div>
+            </div>
+        </div>
+        <div class="student">
+            <img src="~/Content/Images/student2.jpg" alt="Student 2">
+            <div class="student-details">
+                <div class="name">Student 2</div>
+            </div>
+        </div>
+        <div class="student">
+            <img src="~/Content/Images/student3.jpg" alt="Student 3">
+            <div class="student-details">
+                <div class="name">Student 3</div>
+            </div>
+        </div>
+        <!-- Add more students as needed -->
     </div>
 </body>
 </html>
