@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile student-info</title>
-    <link rel="stylesheet" href="/CSS/Dash.css">
+    <title>Profile - Student Info</title>
+    <link rel="stylesheet" href="/css/Dash.css">
 </head>
 <body>
     <h2>Student Dashboard</h2>
@@ -17,7 +17,7 @@
         <h3>Your Grades</h3>
         <hr>
 
-        <div class="Grades">
+        <div class="grades">
             <table>
                 <thead>
                     <tr>
@@ -28,22 +28,22 @@
                 </thead>
                 <tbody>
                     @foreach (var grade in Model.Grades)
-            {
+                    {
                     <tr>
                         <td>@grade.Subject</td>
                         <td>@grade.Year</td>
                         <td>@grade.Score</td>
                     </tr>
-            }
+                    }
                 </tbody>
             </table>
 
             <hr>
             <ul>
                 @foreach (var grade in Model.Grades)
-    {
+                {
                 <li>@grade.Subject (Year @grade.Year): @grade.Score</li>
-    }
+                }
             </ul>
             <div class="result-suggestions">
                 <h3>Result Strand Suggestion:</h3>
@@ -60,6 +60,5 @@
             </div>
         </div>
     </div>
-
 </body>
 </html>
