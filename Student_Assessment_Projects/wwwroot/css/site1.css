@@ -1,12 +1,11 @@
-body {
+﻿body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-
 }
 
 header {
-   /* background-color: #173a8a;*/     /* Remove background*/
+   /* background-color: #173a8a;*/
     color: #fff;
     padding: 0 6rem;
 }
@@ -58,7 +57,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-image: url('');
+    background-image: url('../images/lyceum_bg-removebg-preview (2).png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -178,7 +177,7 @@ h2 {
     justify-content: space-between;
 }
 
-/*    .sidebar .logo {
+    /*    .sidebar .logo {
         text-align: center;
     }
 
@@ -197,10 +196,11 @@ h2 {
             margin: 10px;
             text-decoration: none;
         }
-        .sidebar nav ul li:hover {
-            color: #4C50A9;
-            background-color: #EBE8FC;
-        }
+
+            .sidebar nav ul li:hover {
+                color: #4C50A9;
+                background-color: #EBE8FC;
+            }
 
             .sidebar nav ul li a {
                 border-radius: 5px;
@@ -212,7 +212,7 @@ h2 {
                 .sidebar nav ul li a img.sidebar-icon {
                     width: 25px;
                     height: auto;
-                    padding:0  15px 0 0;
+                    padding: 0 15px 0 0;
                 }
 
 
@@ -240,4 +240,3 @@ h2 {
     flex: 1;
     padding: 20px;
 }
-
