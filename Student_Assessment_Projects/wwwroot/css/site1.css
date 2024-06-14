@@ -6,9 +6,6 @@
 }
 
 header {
-    /* background-color: #173a8a;*/
-    /*color: #fff;
-    padding: 0 6rem;*/
     position: fixed;
     width: 100%;
     top: 0px;
@@ -20,12 +17,6 @@ header {
 }
 
 .container {
-    /* max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;*/
-
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -33,27 +24,6 @@ header {
     margin-top: 2rem;
 }
 
-/*header .logo {
-    display: flex;
-    align-items: center;
-}
-
-    header .logo img {
-        width: 100px;
-        height: auto;
-        margin-right: 10px;
-    }
-
-header .nav {
-    display: flex;
-    gap: 20px;
-}
-
-    header .nav a {
-        color: inherit;
-        text-decoration: none;
-        font-weight: bold;
-    }*/
 
 main {
     padding: 20px 0;
@@ -80,25 +50,42 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* background-image: url('../images/lyceum_bg-removebg-preview (2).png');*/
     background: url("/images/Outline.png") center/cover no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+.track {
+    /* background-color: #ffffff; */
+    /* border: 2px solid #00008b; */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 45%;
+    text-align: justify;
+    display: block;
+}
 
-.column {
-    /* display: flex;
+    .track h3 {
+        text-align: justify;
+        color: #00008b;
+        padding: 10px 0;
+    }
+
+.trackss {
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-color: #fff;*/
+    margin-bottom: 20px;
+}
+.column {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.track h3 {
+/*.track h3 {
     margin-bottom: 5px;
 }
 
@@ -107,7 +94,7 @@ h2 {
     height: 150px;
     object-fit: cover;
     margin-bottom: 10px;
-}
+}*/
 .containers {
     display: flex;
     flex-direction: column;
@@ -127,13 +114,22 @@ h2 {
     align-items: center;
     margin-bottom: 20px;
 }
+.image img {
+        max-width: 200px;
+        height: auto;
+        border-radius: 50%;
+        border: 5px solid #fff;
+}
 
-.tracksss img {
+.content {
+  text-align: justify;
+}
+/*.tracksss img {
     width: 100%;
     height: 330px;
     object-fit: cover;
     margin-bottom: 10px;
-}
+}*/
 
 .about p {
     line-height: 1.5;
