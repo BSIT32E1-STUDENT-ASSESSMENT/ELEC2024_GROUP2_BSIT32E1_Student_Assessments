@@ -1,0 +1,229 @@
+﻿@{
+    ViewBag.Title = "Adviser Module";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .header {
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+            .header .greeting {
+                background-color: #EBE8FC;
+                color: #4C50A9;
+                padding: 15px 25px;
+                border-radius: 10px;
+                font-weight: bold;
+                margin-right: 20px;
+            }
+
+            .header .user-info {
+                display: flex;
+                align-items: center;
+            }
+
+                .header .user-info img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+
+                .header .user-info .user-details {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                    .header .user-info .user-details .name {
+                        font-weight: bold;
+                    }
+
+                    .header .user-info .user-details .role {
+                        color: #666;
+                    }
+
+        .white-box {
+            background-color: white;
+            padding: 50px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 20px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .section-header .section-info {
+                font-size: 20px;
+            }
+
+                .section-header .section-info .grade {
+                    color: #4C50A9;
+                    font-weight: bold;
+                }
+
+            .section-header .actions {
+                display: flex;
+                gap: 10px;
+            }
+
+                .section-header .actions button {
+                    background-color: #4C50A9;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                    .section-header .actions button:hover {
+                        background-color: #3b4099;
+                    }
+
+                    .section-header .actions button.delete {
+                        background-color: white;
+                        color: black;
+                        font-size: 16px;
+                    }
+
+                        .section-header .actions button.delete:hover {
+                        }
+
+                    .section-header .actions button.filters {
+                        color: black;
+                        background-color: white;
+                        font-size: 16px;
+                    }
+
+                        .section-header .actions button.filters:hover, {
+                        }
+
+                    .section-header .actions button.export {
+                        background-color: white;
+                        color: black;
+                        font-size: 16px;
+                    }
+
+                        .section-header .actions button.export:hover {
+                        }
+
+
+                    .section-header .actions button.add-new {
+                        background-color: #4C50A9;
+                        color: white;
+                        font-size: 16px;
+                    }
+
+                        .section-header .actions button.add-new:hover {
+                            background-color: #e7e7e7;
+                        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-content">
+        <div class="header">
+            <div class="greeting">Hello!</div>
+            <div class="user-info">
+
+                <img src="~/Content/Images/user-avatar.png" alt="User Avatar">
+                <div class="user-details">
+                    <div class="name">Aubrey Villareal</div>
+                    <div class="role">Adviser Name</div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="white-box">
+                <div class="section-header">
+                    <div class="section-info">
+                        <span>Section Name</span>
+                        <span class="grade">Grade 10</span>
+                    </div>
+                    <div class="actions">
+                        <button class="delete"><i class="fas fa-trash-alt"></i> Delete</button>
+                        <button class="filters"><i class="fas fa-filter"></i> Filters</button>
+                        <button class="export"><i class="fas fa-file-export"></i> Export from Excel</button>
+                        <button class="add-new"><i class="fas fa-plus"></i> Add New</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th class="sortable">Subject Code &#x25BC;</th>
+                            <th class="sortable">Subjects &#x25BC;</th>
+                            <th class="sortable">Final grades 7 &#x25BC;</th>
+                            <th class="sortable">Final Grades 8 &#x25BC;</th>
+                            <th class="sortable">Final Grades 9 &#x25BC;</th>
+                            <th class="sortable">Final Grades 10 &#x25BC;</th>
+                            <th class="sortable">Strand &#x25BC;</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table rows go here -->
+                    </tbody>
+                </table>
+
+                <div class="section-body">
+                    <!-- Additional content goes here -->
+                    <p>Student Name</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.nav-link').click(function (e) {
+                e.preventDefault();
+                var url = $(this).attr('href');
+                $('#content-area').load(url);
+            });
+        });
+    </script>
+</body>
+</html>

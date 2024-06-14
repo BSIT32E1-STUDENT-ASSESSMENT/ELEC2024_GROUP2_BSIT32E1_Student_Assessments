@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Student_Assessment_Projects.Models;
 using System.Diagnostics;
 
+
 namespace Student_Assessment_Projects.Controllers
 {
     public class HomeController : Controller
@@ -13,12 +14,17 @@ namespace Student_Assessment_Projects.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Dashboard()
         {
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Adviser()
+        {
+            return View();
+        }
+
+        public IActionResult Students()
         {
             return View();
         }

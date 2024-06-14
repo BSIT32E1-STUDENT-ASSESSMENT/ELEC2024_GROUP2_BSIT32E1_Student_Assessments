@@ -1,0 +1,205 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between; /* Space between logo and right-side elements */
+            align-items: center;
+            padding: 20px;
+            background-color: #f4f4f4;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .search-bar {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: #fff;
+            margin-right: 20px; /* Space between search bar and notification button */
+        }
+
+            .header .search-bar input[type="text"] {
+                padding: 10px;
+                border: none;
+                outline: none;
+                flex: 1;
+            }
+
+            .header .search-bar button {
+                background-color: transparent;
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+        .header .header-right button {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-left: 10px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+            .header .header-right button i {
+                font-size: 16px;
+            }
+
+        .header .user-info {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+            .header .user-info img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .header .user-info .user-details {
+                display: flex;
+                flex-direction: column;
+            }
+
+                .header .user-info .user-details .name {
+                    font-weight: bold;
+                }
+
+                .header .user-info .user-details .role {
+                    color: #666;
+                }
+
+        .date-time {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #673ab7;
+            color: white;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+            .date-time h1 {
+                margin: 0;
+                font-size: 24px;
+            }
+
+            .date-time h2 {
+                margin: 5px 0 0 0;
+                font-size: 20px;
+            }
+
+        .student-list {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .student {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+            .student img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                margin-right: 10px;
+            }
+
+            .student .student-details {
+                display: flex;
+                flex-direction: column;
+            }
+
+                .student .student-details .name {
+                    font-weight: bold;
+                }
+    </style>
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-right">
+            <div class="search-bar">
+                <input type="text" placeholder="Search Dashboard">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+            </button>
+            <button class="message-btn">
+                <i class="fas fa-comment"></i>
+            </button>
+            <div class="user-info">
+                <img src="~/Content/Images/user-avatar.png" alt="User Avatar">
+                <div class="user-details">
+                    <div class="name">Aubrey Villareal</div>
+                    <div class="role">Adviser Name</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="date-time">
+        <h1>Today's Date : @DateTime.Now.ToString("MMMM dd, yyyy")</h1>
+        <h2>Today's Time : @DateTime.Now.ToString("hh:mm tt")</h2>
+    </div>
+
+    
+    <div class="student-list">
+        <div>Students</div>
+        <div class="student">
+            <img src="~/Content/Images/student1.jpg" alt="Student 1">
+            <div class="student-details">
+                <div class="name">Student 1</div>
+            </div>
+        </div>
+        <div class="student">
+            <img src="~/Content/Images/student2.jpg" alt="Student 2">
+            <div class="student-details">
+                <div class="name">Student 2</div>
+            </div>
+        </div>
+        <div class="student">
+            <img src="~/Content/Images/student3.jpg" alt="Student 3">
+            <div class="student-details">
+                <div class="name">Student 3</div>
+            </div>
+        </div>
+        <!-- Add more students as needed -->
+    </div>
+</body>
+</html>
