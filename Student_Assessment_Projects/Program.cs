@@ -40,7 +40,12 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Dashboard}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.MapRazorPages();
+
+app.MapControllerRoute(
+    name: "Adviser",
+    pattern: "{controller=Home}/{action=dashboard}/{id?}");
 app.MapRazorPages();
 
 // Initialize the database with roles and a default teacher user.

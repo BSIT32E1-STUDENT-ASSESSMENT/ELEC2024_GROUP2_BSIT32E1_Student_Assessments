@@ -13,6 +13,10 @@ namespace Student_Assessment_Projects.Controllers
         {
             _logger = logger;
         }
+        public IActionResult Index()
+        {
+            return View();
+        }
 
         public IActionResult Dashboard()
         {
@@ -25,6 +29,11 @@ namespace Student_Assessment_Projects.Controllers
         }
 
         public IActionResult Students()
+        {
+            return View();
+        }
+
+        public IActionResult NewAdviser()
         {
             return View();
         }
