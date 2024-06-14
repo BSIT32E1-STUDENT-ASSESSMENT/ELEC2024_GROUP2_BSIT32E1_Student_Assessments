@@ -1,0 +1,199 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap');
+
+body {
+    background-color: rgba(64, 117, 173, 1);
+}
+
+
+.login-container {
+    position: relative;
+    margin-top: -620px;
+    width: 140%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-left: -300px;
+
+}
+/* white bg in login form */
+.background-image {
+    background-image: url('~/images/Rectangle 1.png');
+    width: 350px;
+    height: 300px;
+    gap: 0px;
+    border-radius: 15px ;
+    border: 1px 0px 0px 0px;
+}
+
+.form-section {
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8); /* Optional: Add background to the form */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    top: 456px;
+    margin-left: 50px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
+.form-labels {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    width: 402px;
+    height: 34px;
+    margin-top: -70px;
+    margin-left: 50px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.78px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    color: rgba(35, 49, 66, 1);
+}
+
+.passwords {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 21.09px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: rgba(35, 49, 66, 1);
+    margin-left: 200px;
+}
+
+.text-danger {
+   margin-left: 50px;
+   font-size: 13px;
+}
+
+.form-control {
+    width: 300px;
+    height: 42px;
+    gap: 0px;
+    border-radius: 10px;
+    border: 3px;
+    background-color: rgba(35, 49, 66, 1);
+    margin-top: -15px;
+    margin-left: 43px;
+    margin-bottom: -4px;
+}
+
+.form-controlss {
+    width: 300px;
+    height: 42px;
+    gap: 0px;
+    border-radius: 10px;
+    border: 3px;
+    background-color: rgba(35, 49, 66, 1);
+    margin-top: -15px;
+    margin-left: 43px;
+    margin-bottom: -4px;
+}
+
+.login-image {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+    left: 937px;
+    gap: 0px;
+}
+
+.custom-button {
+    width: 300px;
+    height: 42px;
+    border-radius: 15px;
+    margin-left: 43px;
+    opacity: 1; /* Assuming you want the button to be visible, if not set to 0 */
+    position: relative;
+    background-color: rgba(249, 89, 89, 1);
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 28.13px;
+    letter-spacing: 0.10em;
+    text-align: center;
+    color: white;
+}
+
+    .custom-button:hover {
+        background-color: #ff4a48;
+        color: white;
+    }
+
+.Register {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18.75px;
+    letter-spacing: 0.05em;
+    text-align: center;
+    color: rgba(35, 49, 66, 1);
+    margin-left: 90px;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-icon {
+    height: 23px;
+    position: absolute;
+    top: 50%;
+    left: 313px; /* Adjust the left value as needed */
+    transform: translateY(-50%);
+    pointer-events: none; /* So the image doesn't block input field clicks */
+}
+
+.input-icons {
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 310px; /* Adjust the left value as needed */
+    transform: translateY(-50%);
+    pointer-events: none; /* So the image doesn't block input field clicks */
+}
+
+.input-container input {
+    padding-left: 20px; /* Adjust the padding to make space for the icon */
+    color: white;
+    background-color: rgba(35, 49, 66, 1);
+    font-family: Roboto;
+}
+
+p {
+    font-family: 'Solway', sans-serif;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 48px;
+    letter-spacing: 0.15em;
+    text-align: center;
+    color: white;
+    margin-right: 450px;
+    margin-top: 60px;
+    margin-left: -150px;
+}
+
+.text-centers img {
+    width: 400px;
+    height: 400px;
+    margin-top: -5px;
+    left: 136px;
+    gap: 0px;
+    margin-left: -55px;
+}
