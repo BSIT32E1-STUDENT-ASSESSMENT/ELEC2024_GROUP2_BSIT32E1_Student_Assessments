@@ -7,17 +7,17 @@ body {
 
 header {
    /* background-color: #173a8a;*/     /* Remove background*/
-    color: #fff;
-    padding: 0 6rem;
+    /*color: #fff;
+    padding: 0 6rem;*/
 }
 
-.container {
+/*.container {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+}*/
 
 header .logo {
     display: flex;
@@ -40,10 +40,10 @@ header .nav {
         text-decoration: none;
         font-weight: bold;
     }
-
+/*
 main {
     padding: 20px 0;
-}
+}*/
 
 section {
     margin-bottom: 20px;

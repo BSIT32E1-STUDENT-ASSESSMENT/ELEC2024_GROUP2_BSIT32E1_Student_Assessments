@@ -4,6 +4,13 @@ body {
     background-color: rgba(64, 117, 173, 1);
 }
 
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .login-container {
     position: relative;
