@@ -13,7 +13,7 @@ body {
 } 
 .register-container {
     position: relative;
-    margin-top: -590px;
+    margin-top: -580px;
     width: 140%;
     display: flex;
     justify-content: left;
@@ -26,7 +26,7 @@ body {
 .background-image {
     background-image: url('~/images/Rectangle 1.png');
     width: 350px;
-    height: 360px;
+    height: 525px;
     gap: 0px;
     border-radius: 15px;
     border: 1px 0px 0px 0px;
@@ -45,12 +45,10 @@ body {
 }
 
 .form-label {
-    margin-bottom: 0.5rem;
     font-weight: bold;
     width: 402px;
     height: 34px;
     margin-left: 50px;
-    margin-top: 5px;
     font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
@@ -58,65 +56,16 @@ body {
     letter-spacing: 0.15em;
     text-align: left;
     color: rgba(35, 49, 66, 1);
-}
 
-.form-labels {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    width: 402px;
-    height: 34px;
-    margin-left: 50px;
-    margin-top: 15px;
-    margin-bottom: -5px;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 25.78px;
-    letter-spacing: 0.15em;
-    text-align: left;
-    color: rgba(35, 49, 66, 1);
 }
-
-.form-labelss {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    width: 402px;
-    height: 34px;
-    margin-left: 1px;
-    margin-top: 15px;
-    margin-bottom: -3px;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 25.78px;
-    letter-spacing: 0.15em;
-    text-align: left;
-    color: rgba(35, 49, 66, 1);
-}
-
-.form-labelsss {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    width: 402px;
-    height: 34px;
-    margin-left: -1px;
-    margin-top: 5px;
-    margin-bottom: -3px;
-    font-family: Roboto;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 25.78px;
-    letter-spacing: 0.15em;
-    text-align: left;
-    color: rgba(35, 49, 66, 1);
-}
-
 
 
 .text-danger {
-    margin-left: 50px;
+    margin-left: 170px;
     font-size: 13px;
+
 }
+
 
 .form-control {
     width: 300px;
@@ -127,39 +76,39 @@ body {
     background-color: rgba(35, 49, 66, 1);
     margin-top: -15px;
     margin-left: 43px;
-    margin-bottom: -15px;
+    margin-bottom: 2px;
 }
 
-.form-controlss {
+.input-container input {
     width: 300px;
     height: 35px;
     gap: 0px;
     border-radius: 10px;
     border: 3px;
     background-color: rgba(35, 49, 66, 1);
-    margin-top: -15px;
+   /* margin-top: -15px;*/
     margin-left: 43px;
-    margin-bottom: -100px;
+    margin-bottom: 5px;
 }
 
 .login-image {
     width: 150px;
     height: 150px;
-    margin-top: 10px;
+    margin-top: -5px;
     left: 937px;
     gap: 0px;
 }
 
-.customs-button {
+.custom-button {
     width: 300px;
     height: 42px;
     border-radius: 15px;
-    margin-left: -8px;
+    margin-left: 40px;
     opacity: 1; /* Assuming you want the button to be visible, if not set to 0 */
     position: relative;
     background-color: rgba(249, 89, 89, 1);
     margin-bottom: 10px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-family: Roboto;
     font-size: 20px;
     line-height: 28.13px;
@@ -168,7 +117,7 @@ body {
     color: white;
 }
 
-    .customs-button:hover {
+    .custom-button:hover {
         background-color: #ff4a48;
         color: white;
     }
@@ -186,7 +135,7 @@ body {
     letter-spacing: 0.05em;
     text-align: center;
     color: rgba(35, 49, 66, 1);
-    margin-left: 115px;
+    margin-left: 118px;
 }
 
 .input-icon {
@@ -207,12 +156,6 @@ body {
     pointer-events: none; /* So the image doesn't block input field clicks */
 }
 
-.input-container input {
-    padding-left: 20px; /* Adjust the padding to make space for the icon */
-    color: white;
-    background-color: rgba(35, 49, 66, 1);
-    font-family: Roboto;
-}
 
 p {
     font-family: 'Solway', sans-serif;
