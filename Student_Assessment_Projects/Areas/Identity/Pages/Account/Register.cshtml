@@ -3,7 +3,7 @@
 
 <body>
     
-<link rel="stylesheet" href="~/css/registration.css" />
+<link rel="stylesheet" href="~/css/Register.css" />
 
 <p>STUDENT ASSESSMENT FOR SENIOR HIGH SCHOOL STRAND</p>
 
@@ -30,16 +30,16 @@
                            
 
 
-                            @* <br /> *@
+                            <br />
 
-                            <label class="form-labels">Firstname</label>
+                            <label class="form-label">Firstname</label>
                             <div class="input-container">
-                                <input class="form-controlss" autocomplete="firstname" aria-required="true" />
+                                <input class="form-control" autocomplete="firstname" aria-required="true" />
                                 <img src="~/images/users.png" class="input-icons" alt="username icon" />
                             </div>
 
 
-                           @*  <br /> *@
+                            <br />
 
 
                             <label class="form-label">Username</label>
@@ -50,26 +50,26 @@
 
                             <span asp-validation-for="Input.Email" class="text-danger"></span>
 
-
+                            <br />
                        
-                            <label class="form-labelss">Password</label>
+                            <label class="form-label">Password</label>
                             <div class="input-container">
-                                <input asp-for="Input.Password" class="form-controlss" autocomplete="current-password" aria-required="true" />
+                                <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
                                 <img src="~/images/lock.png" class="input-icon" alt="password icon" />
                             </div>
                             <span asp-validation-for="Input.Password" class="text-danger"></span>
 
+                            <br />
                            
-                            <label class="form-labelsss">Confirm Password</label>
+                            <label class="form-label">Confirm Password</label>
                             <div class="input-container">
-                                <input class="form-controlss" autocomplete="current-password" aria-required="true" />
+                                <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
                                 <img src="~/images/lock.png" class="input-icon" alt="password icon" />
                             </div>
-
                             <span asp-validation-for="Input.Password" class="text-danger"></span>
 
-
-                            <button id="login-submit" type="submit" class="btn customs-button">REGISTER</button>
+                            <br />
+                            <button id="login-submit" type="submit" class="btn custom-button">REGISTER</button>
 
 
 
