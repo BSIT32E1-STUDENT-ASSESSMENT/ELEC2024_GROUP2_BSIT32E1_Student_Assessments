@@ -1,42 +1,49 @@
-﻿
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Student_Assessment_Projects.Data;
-using Student_Assessment_Projects.Models;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
 
-[Authorize(Roles = "Student")]
+using Student_Assessment_Projects.Models;
+
 public class StudentController : Controller
 {
-    private readonly ApplicationDbContext _context;
-
-    public StudentController(ApplicationDbContext context)
+    public ActionResult Adviser()
     {
-        _context = context;
+        var studentGrades = InMemoryDatabase.StudentGrade;
+        if (studentGrades == null || !studentGrades.Any())
+        {
+            // Log or handle the case where studentGrades is null or empty
+        }
+        return View(studentGrades); // Ensure this returns the correct view
     }
 
-    // GET: Student/Dashboard
-    public async Task<IActionResult> Dashboard()
+    public ActionResult AddGrade()
     {
-        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-        var student = await _context.Students
-            .Include(s => s.Grades)
-            .FirstOrDefaultAsync(s => s.Id == userId);
-
-        // Logic to determine strand based on grades
-        var strand = DetermineStrand(student);
-
-        ViewBag.Strand = strand;
-        return View(student);
+        return View();
     }
 
-    private string DetermineStrand(Student student)
+    [HttpPost]
+    public ActionResult AddGrade(StudentGrade studentGrade)
     {
-        // Implement your logic to determine the strand based on grades
-        return "Science"; // Example
+        if (InMemoryDatabase.StudentGrade.Any(s => s.StudentNumber == studentGrade.StudentNumber))
+        {
+            ModelState.AddModelError("StudentNumber", "Student number already exists.");
+            return View(studentGrade);
+        }
+
+        InMemoryDatabase.StudentGrade.Add(studentGrade);
+        return RedirectToAction("Adviser"); // Redirect to Adviser action
     }
+
+
+    public ActionResult RecommendStrand(int id)
+    {
+        var studentGrade = InMemoryDatabase.StudentGrade.FirstOrDefault(s => s.Id == id);
+        if (studentGrade == null)
+        {
+            return NotFound(); // Change this line
+        }
+        var recommendedStrand = InMemoryDatabase.GetRecommendedStrands(studentGrade);
+        ViewBag.RecommendedStrand = recommendedStrand;
+        return View(studentGrade);
+    }
+
 }
 

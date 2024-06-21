@@ -1,0 +1,145 @@
+﻿@model Student_Assessment_Projects.Models.StudentGrade
+@{
+    ViewData["Title"] = "Student Details";
+    Layout = "~/Views/Shared/_Adviser.cshtml";
+}
+
+<style>
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: black;
+    }
+
+    h4 {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: black;
+        text-align: center;
+    }
+
+    p {
+        margin: 5px 0;
+        color: black;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+        border: 1px solid #ddd;
+        background-color: #fff;
+    }
+
+        .table th,
+        .table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+    .emes {
+        margin-top: 50px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        background-color: #4C50A9;
+        color: #fff;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn:hover {
+            background-color: #3c3f85;
+        }
+</style>
+
+<h2>Student Details</h2>
+
+<body>
+    <div class="container">
+
+        <div>
+            <h4>Student Information</h4>
+            <p><strong>Student Number:</strong> @Model.StudentNumber</p>
+            <p><strong>Name:</strong> @Model.StudentName</p>
+        </div>
+
+        <div>
+            <h4>Grades</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Math</td>
+                        <td>@Model.Math</td>
+                    </tr>
+                    <tr>
+                        <td>English</td>
+                        <td>@Model.English</td>
+                    </tr>
+                    <tr>
+                        <td>Science</td>
+                        <td>@Model.Science</td>
+                    </tr>
+                    <tr>
+                        <td>History</td>
+                        <td>@Model.History</td>
+                    </tr>
+                    <tr>
+                        <td>Values</td>
+                        <td>@Model.Values</td>
+                    </tr>
+                    <tr>
+                        <td>Filipino</td>
+                        <td>@Model.Filipino</td>
+                    </tr>
+                    <tr>
+                        <td>TLE</td>
+                        <td>@Model.TLE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h4>Recommended Strands</h4>
+            <p>First Choice: @Model.FirstChoice</p>
+            <p>Second Choice: @(ViewBag.RecommendedStrands != null ? ViewBag.RecommendedStrands.Item2 : "N/A")</p>
+        </div>
+
+        <div class="emes">
+            <a asp-controller="Home" asp-action="Students" class="btn btn-primary">Done</a>
+        </div>
+    </div>
+</body>

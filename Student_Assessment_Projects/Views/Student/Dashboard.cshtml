@@ -29,11 +29,11 @@
                 <tbody>
                     @foreach (var grade in Model.Grades)
                     {
-                    <tr>
-                        <td>@grade.Subject</td>
-                        <td>@grade.Year</td>
-                        <td>@grade.Score</td>
-                    </tr>
+                        <tr>
+                            <td>@grade.Subject</td>
+                            <td>@grade.Year</td>
+                            <td>@grade.Score</td>
+                        </tr>
                     }
                 </tbody>
             </table>
@@ -42,7 +42,7 @@
             <ul>
                 @foreach (var grade in Model.Grades)
                 {
-                <li>@grade.Subject (Year @grade.Year): @grade.Score</li>
+                    <li>@grade.Subject (Year @grade.Year): @grade.Score</li>
                 }
             </ul>
             <div class="result-suggestions">
