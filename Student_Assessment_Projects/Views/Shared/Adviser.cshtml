@@ -1,6 +1,7 @@
-﻿@model Student_Assessment_Projects.Models.StudentGrade
+﻿@model IEnumerable<Student_Assessment_Projects.Models.StudentGrade>
+@using Student_Assessment_Projects.Models
 @{
-    ViewBag.Title = "Student";
+    ViewBag.Title = "Student Grades";
     Layout = "~/Views/Shared/_Adviser.cshtml";
 }
 
@@ -10,81 +11,292 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            background-color: #fff;
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+
+
+
+        .main-content {
+            flex: 1;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        .btn-primary {
-            background-color: #4C50A9;
-            color: #fff;
-            border: none;
+        .header {
+            background-color: #f4f4f4;
+            color: #333;
             padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 4px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
         }
 
-            .btn-primary:hover {
-                background-color: #394185;
+            .header .greeting {
+                background-color: #EBE8FC;
+                color: #4C50A9;
+                padding: 15px 25px;
+                border-radius: 10px;
+                font-weight: bold;
+                margin-right: 20px;
+            }
+
+            .header .user-info {
+                display: flex;
+                align-items: center;
+            }
+
+                .header .user-info img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+
+                .header .user-info .user-details {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                    .header .user-info .user-details .name {
+                        font-weight: bold;
+                    }
+
+                    .header .user-info .user-details .role {
+                        color: #666;
+                    }
+
+        .white-box {
+            background-color: white;
+            padding: 50px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+
+        .content {
+            margin: 20px 0;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .section-header .section-info {
+                font-size: 20px;
+            }
+
+                .section-header .section-info .grade {
+                    color: #4C50A9;
+                    font-weight: bold;
+                }
+
+            .section-header .actions {
+                display: flex;
+                gap: 10px;
+            }
+
+                .section-header .actions button {
+                    background-color: #4C50A9;
+                    color: white;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                    .section-header .actions button:hover {
+                        background-color: #3b4099;
+                    }
+
+                    .section-header .actions button.delete {
+                        background-color: white;
+                        color: black;
+                        font-size: 16px;
+                    }
+
+                        .section-header .actions button.delete:hover {
+                        }
+
+                    .section-header .actions button.filters {
+                        color: black;
+                        background-color: white;
+                        font-size: 16px;
+                    }
+
+                        .section-header .actions button.filters:hover {
+                        }
+
+                    .section-header .actions button.export {
+                        background-color: white;
+                        color: black;
+                        font-size: 16px;
+                        border: 2px solid /* Add border here */
+                    }
+
+                        .section-header .actions button.export:hover {
+                            background-color: #e7e7e7; /* Change hover background color if needed */
+                        }
+
+
+                    .section-header .actions button.add-new {
+                        background-color: #4C50A9;
+                        color: white;
+                        font-size: 16px;
+                    }
+
+                        .section-header .actions button.add-new:hover {
+                            background-color: #e7e7e7;
+                        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+            table th, table td {
+                padding: 10px;
+                border: 1px solid #e0e0e0;
+                text-align: left;
+            }
+
+            table th {
+                background-color: #f4f4f4;
+                text-align: center;
+            }
+
+        input[type="checkbox"] {
+            accent-color: purple; /* This should work in modern browsers */
+        }
+
+            input[type="checkbox"]::before {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background-color: white;
+                border: 1px solid #e0e0e0;
+                border-radius: 2px;
+                box-sizing: border-box;
+            }
+
+            input[type="checkbox"]:checked::before {
+                background-color: purple; /* Fallback for older browsers */
+                content: '\2713'; /* Checkmark symbol */
+                color: white;
+                text-align: center;
+                line-height: 16px;
+                font-size: 14px;
             }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Enter Student Number</h1>
-
-        <form asp-action="EnterStudentNumber" method="post">
-
-            @using (Html.BeginForm("Students", "Home", FormMethod.Post))
-            {
-                @Html.AntiForgeryToken()
-
-                <form asp-action="EnterStudentNumber" asp-controller="Home" method="post">
-                    <div class="form-group">
-                        <label for="studentNumber">Student Number:</label>
-                        <input type="text" id="studentNumber" name="studentNumber" class="form-control" required />
+    <div class="main-content">
+        <div class="header">
+            <div class="greeting">Hello!</div>
+            <div class="user-info">
+                <img src="~/images/profile.png" alt="User Avatar">
+                <div class="user-details">
+                    <div class="name">Aubrey Villareal</div>
+                    <div class="role">Adviser Name</div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="white-box">
+                <div class="section-header">
+                    <div class="section-info">
+                        <span>Section Name</span>
+                        <span class="grade">Grade 10</span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
+                    <div class="actions">
+                        <button class="delete"><i class="fas fa-trash-alt"></i> Delete</button>
+                        <button class="filters"><i class="fas fa-filter"></i> Filters</button>
+                        <button class="export"><i class="fas fa-file-export"></i> Export from Excel</button>
+                        <button class="add-new" id="add-new"><i class="fas fa-plus"></i> Add New</button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Student Number</th>
+                                <th>Student Name</th>
+                                <th>Math</th>
+                                <th>English</th>
+                                <th>Science</th>
+                                <th>History</th>
+                                <th>Values</th>
+                                <th>Filipino</th>
+                                <th>TLE</th>
+                                <th>First Choice</th>
+                                <th>Second Choice</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model != null && Model.Any())
+                            {
+                                foreach (var item in Model)
+                                {
+                                    if (item != null)
+                                    {
+                                        var recommendedStrands = Strand.GetRecommendedStrands(item.Math, item.English, item.Science, item.History, item.Values, item.Filipino, item.TLE);
+                                        <tr>
+                                            <td>@item.StudentNumber</td>
+                                            <td>@item.StudentName</td>
+                                            <td>@item.Math</td>
+                                            <td>@item.English</td>
+                                            <td>@item.Science</td>
+                                            <td>@item.History</td>
+                                            <td>@item.Values</td>
+                                            <td>@item.Filipino</td>
+                                            <td>@item.TLE</td>
+                                            <td>@recommendedStrands.Item1</td>
+                                            <td>@recommendedStrands.Item2</td>
+                                        </tr>
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="11">No student grades available.</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
 
-            }
-        </form>
+            </div>
+        </div>
     </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.nav-link').click(function (e) {
+                e.preventDefault();
+                var url = $(this).attr('href');
+                $('#content-area').load(url);
+            });
+
+            // Add click event for "Add New" button
+            $('#add-new').click(function () {
+                window.location.href = '/Student/AddGrade';
+            });
+        });
+    </script>
 </body>
 </html>
