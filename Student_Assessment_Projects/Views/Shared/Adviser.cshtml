@@ -1,0 +1,90 @@
+﻿@model Student_Assessment_Projects.Models.StudentGrade
+@{
+    ViewBag.Title = "Student";
+    Layout = "~/Views/Shared/_Adviser.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .btn-primary {
+            background-color: #4C50A9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+            .btn-primary:hover {
+                background-color: #394185;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Student Number</h1>
+
+        <form asp-action="EnterStudentNumber" method="post">
+
+            @using (Html.BeginForm("Students", "Home", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+
+                <form asp-action="EnterStudentNumber" asp-controller="Home" method="post">
+                    <div class="form-group">
+                        <label for="studentNumber">Student Number:</label>
+                        <input type="text" id="studentNumber" name="studentNumber" class="form-control" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+            }
+        </form>
+    </div>
+</body>
+</html>
